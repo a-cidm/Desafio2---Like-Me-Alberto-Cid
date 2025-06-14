@@ -28,7 +28,6 @@ function Post({
         />
         <div className="p-3">
           <h4 className="card-title">{titulo}</h4>
-          <input onChange={handleTituloChange} />
           <p className="card-text">{descripcion}</p>
           <div className="d-flex justify-content-between align-items-center">
             <div>
