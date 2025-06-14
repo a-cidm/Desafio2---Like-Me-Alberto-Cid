@@ -59,7 +59,14 @@ El frontend estará disponible en [http://localhost:5173](http://localhost:5173)
 - Da "like" a los posts usando el botón correspondiente.
 - Elimina posts con el botón de eliminar.
 
+## Cumplimiento de Requerimientos
+
+- Se implementa una ruta PUT en la API REST para modificar registros (likes) en PostgreSQL.
+- Se implementa una ruta DELETE en la API REST para eliminar registros en PostgreSQL.
+- Todas las consultas SQL están protegidas con sentencias try/catch para capturar errores.
+- El frontend realiza el CRUD utilizando `fetch` en React.
+
 ## Créditos
 
-Desafío desarrollado como parte del módulo 6 de Desafio Latam - G86.
+Desafío desarrollado como parte Desafio Latam - G86.
 

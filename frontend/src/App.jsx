@@ -1,8 +1,4 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
-import Form from "./components/Form";
-import Post from "./components/Post";
-
 const urlBaseServer = "http://localhost:3000";
 
 function App() {
@@ -12,25 +8,32 @@ function App() {
   const [posts, setPosts] = useState([]);
 
   const getPosts = async () => {
-    const { data: posts } = await axios.get(urlBaseServer + "/posts");
+    const res = await fetch(urlBaseServer + "/posts");
+    const posts = await res.json();
     setPosts([...posts]);
   };
 
   const agregarPost = async () => {
     const post = { titulo, img: imgSrc, descripcion };
-    await axios.post(urlBaseServer + "/posts", post);
+    await fetch(urlBaseServer + "/posts", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(post),
+    });
     getPosts();
   };
 
-  // este método se utilizará en el siguiente desafío
   const like = async (id) => {
-    await axios.put(urlBaseServer + `/posts/like/${id}`);
+    await fetch(urlBaseServer + `/posts/like/${id}`, {
+      method: "PUT",
+    });
     getPosts();
   };
 
-  // este método se utilizará en el siguiente desafío
   const eliminarPost = async (id) => {
-    await axios.delete(urlBaseServer + `/posts/${id}`);
+    await fetch(urlBaseServer + `/posts/${id}`, {
+      method: "DELETE",
+    });
     getPosts();
   };
 

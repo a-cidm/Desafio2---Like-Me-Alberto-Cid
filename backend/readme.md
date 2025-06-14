@@ -37,3 +37,9 @@ Este backend utiliza Node.js, Express y PostgreSQL para gestionar los posts y li
 - `PUT /posts/like/:id` - Agrega un like a un post.
 - `DELETE /posts/:id` - Elimina un post.
 
+### Cumplimiento de Requerimientos
+
+- **Ruta PUT**: Se utiliza la ruta `PUT /posts/like/:id` para modificar el número de likes de un post en la base de datos PostgreSQL.
+- **Ruta DELETE**: Se utiliza la ruta `DELETE /posts/:id` para eliminar un registro de la tabla `posts` en PostgreSQL.
+- **Manejo de errores**: Todas las consultas SQL realizadas con el paquete `pg` están envueltas en sentencias `try/catch` para capturar posibles errores y responder adecuadamente.
+

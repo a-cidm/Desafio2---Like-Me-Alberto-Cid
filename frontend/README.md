@@ -26,6 +26,12 @@ Este frontend es una aplicación React que consume el backend de "Like Me".
 
 - El frontend espera que el backend esté corriendo en [http://localhost:3000](http://localhost:3000).
 - Puedes modificar la URL del backend en el archivo `src/App.jsx` si es necesario.
+- Todas las operaciones CRUD (crear, leer, actualizar likes y eliminar posts) se realizan utilizando `fetch` para cumplir con los requerimientos del desafío.
+
+## Cumplimiento de Requerimientos
+
+- El frontend implementa un CRUD completo utilizando `fetch` para interactuar con la API REST del backend.
+- Se pueden crear, listar, dar like y eliminar posts desde la interfaz.
 
 # React + Vite
 
